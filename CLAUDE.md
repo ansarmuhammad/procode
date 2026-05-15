@@ -8,10 +8,10 @@ This is a **Microsoft Copilot Studio (MCS)** agent project. All configuration is
 
 ## Agent Overview
 
-**IBM Top Products Finder** (`cr697_ibmTopProductsFinder`) — An agent that:
-1. Browses ibm.com and xynotech.com to retrieve top 10 products from each
-2. Uses a sub-agent (`Agent/agent.mcs.yml`) to independently re-evaluate and select the top 3 from those results
-3. Emails the final output to `ansar.muhammad@10pearls.com` via Office 365 Outlook
+**IBM Top Products Finder** (`cr697_ibmTopProductsFinder`) — An agent with two distinct behaviours:
+
+1. **Product search** (user-initiated): Browses ibm.com and xynotech.com to retrieve top 10 products from each, uses a sub-agent (`agents/Agent/agent.mcs.yml`) to independently re-select the top 3, then emails the result to `ansar.muhammad@10pearls.com`.
+2. **Rafay email archiver** (automated trigger): When `rafay.moin@10pearls.com` sends an email, the Power Automate flow fires, passes the email to the agent, which creates a Word document named `Copilot <Subject>.docx` (heading: `Copilot <Subject>`, then From / Date / Body) and saves it to OneDrive root.
 
 ## File Format
 
@@ -43,18 +43,21 @@ IBM Top Products Finder/
 ### Key Design Decisions
 
 - **Dual-agent pattern**: The root agent fetches top 10; the `Agent` sub-agent independently selects top 3 without being biased by the root's ranking (`agents/Agent/agent.mcs.yml`).
-- **Trigger**: Conversations can be initiated by an incoming email (Power Automate flow in `workflows/`) or directly via Teams/M365 Copilot channels.
-- **MCP connectors**: Work IQ integrations (Mail, Teams, OneDrive, Word, User memory) are all MCP-based (`shared_a365*mcp` connectors).
-- **`.mcs/.gitignore`** ignores everything — meaning `.mcs/` internal state should not be committed. Only `.mcs.yml` files are source-controlled.
+- **Trigger**: The Power Automate flow (`workflows/`) already filters `from: rafay.moin@10pearls.com` at the connector level — no topic-level filtering needed. The workflow message instructs the agent what action to take before passing `@{triggerBody()}`. Direct conversations arrive via Teams/M365 Copilot channels.
+- **MCP connectors**: Work IQ integrations (Mail, Teams, OneDrive, Word, User memory) are all MCP-based (`shared_a365*mcp` connectors). These are wired in `connectionreferences.mcs.yml` and referenced by logical name in each action file.
+- **`.mcs/` is not source-controlled**: `.mcs/.gitignore` ignores everything in that directory. Only `.mcs.yml` files belong in git.
 
 ## Deployment
 
-This agent is deployed via Microsoft Copilot Studio UI — there is no CLI deploy command. To publish changes:
-1. Edit `.mcs.yml` files in the repository
-2. Import the solution into Copilot Studio (or use the MCS VS Code extension to sync)
-3. Publish from the Copilot Studio portal
+Changes to `.mcs.yml` files must be pushed into Copilot Studio manually — there is no local run or test command.
 
-Published on: `2026-04-10`. Schema name: `cr697_ibmTopProductsFinder`. Language: English (1033).
+**From VS Code (recommended):** Install the **Power Platform Tools** extension (Microsoft). It bundles `pac` for macOS, adds a sidebar, and provides a Push to Copilot Studio button after signing in.
+
+**From the web UI:** Open [copilotstudio.microsoft.com](https://copilotstudio.microsoft.com) → IBM Top Products Finder → Settings → Instructions, paste updated content, Save, then Publish.
+
+> **Note:** `pac` CLI via `dotnet tool install` is Windows-only — the NuGet package ships no macOS binary. Use the VS Code extension on macOS.
+
+Published on: `2026-04-10`. Schema name: `cr697_ibmTopProductsFinder`. Environment: `org3e6b68e9`. Language: English (1033).
 
 ## Channels
 
