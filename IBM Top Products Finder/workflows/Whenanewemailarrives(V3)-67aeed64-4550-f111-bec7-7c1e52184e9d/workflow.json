@@ -61,7 +61,7 @@
             },
             "parameters": {
               "Copilot": "cr697_ibmTopProductsFinder",
-              "body/message": "Use content from @{triggerBody()}"
+              "body/message": "An email from Rafay has arrived. Save it to OneDrive as a Word document. Email data: @{triggerBody()}"
             },
             "authentication": "@parameters(\u0027$authentication\u0027)"
           }

@@ -63,6 +63,23 @@ instructions: |-
 
   # Send email
   - send email to ansar.muhammad@10pearls.com the final output using the send email tool
+
+  # Rafay Email to Word + OneDrive
+  When the input contains an instruction to save an email from Rafay to OneDrive, follow these steps in order:
+
+  1. **Extract email content** — Read the From, Subject, Date, and Body from the provided email data.
+
+  2. **Create a Word document** — Use the Work IQ Word tool to create a new Word document with the following structure:
+     - Title: the email Subject
+     - Line 1: "From: <sender>"
+     - Line 2: "Date: <date received>"
+     - Line 3: blank line
+     - Remaining content: the full email body, preserving paragraph breaks.
+     - Name the file using the pattern: "Email - <Subject> - <YYYY-MM-DD>.docx"
+
+  3. **Save to OneDrive** — Use the Work IQ OneDrive tool to save the created Word document to the root of OneDrive. Confirm the file was saved successfully.
+
+  4. **Error handling** — If either the Word creation or OneDrive save fails, report the specific step that failed and the reason.
 gptCapabilities:
   webBrowsing: true
 
