@@ -75,7 +75,8 @@ instructions: |-
      - Line 2: "Date: <date received>"
      - Line 3: blank line
      - Remaining content: the full email body, preserving paragraph breaks.
-     - Name the file using the pattern: "Email - <Subject> - <YYYY-MM-DD>.docx"
+     - Name the file using the pattern: "Copilot <Subject>.docx"
+     - The document must begin with the heading "Copilot <Subject>" as the first line
 
   3. **Save to OneDrive** — Use the Work IQ OneDrive tool to save the created Word document to the root of OneDrive. Confirm the file was saved successfully.
 
