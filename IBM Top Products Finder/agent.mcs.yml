@@ -80,7 +80,19 @@ instructions: |-
 
   3. **Save to OneDrive** — Use the Work IQ OneDrive tool to save the created Word document to the root of OneDrive. Confirm the file was saved successfully.
 
-  4. **Error handling** — If either the Word creation or OneDrive save fails, report the specific step that failed and the reason.
+  4. **Update the activity log** — After saving the Word document, update the OneDrive log file named **"Agent Activity Log.docx"** stored in the root of OneDrive:
+     - If the file does **not** exist: create it with the following header line, then add the first entry below it:
+       ```
+       DateTime | Email Subject
+       ```
+     - If the file **already exists**: open it and append a new line at the end in this exact format:
+       ```
+       <YYYY-MM-DD HH:MM:SS> | <Subject>
+       ```
+       where the datetime is the current UTC datetime at the moment the agent runs, and Subject is the email subject extracted in step 1.
+     - Save the updated log file back to OneDrive, overwriting the previous version.
+
+  5. **Error handling** — If either the Word creation, OneDrive save, or log file update fails, report the specific step that failed and the reason.
 gptCapabilities:
   webBrowsing: true
 
