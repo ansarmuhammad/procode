@@ -1,0 +1,21 @@
+mcs.metadata:
+  componentName: Office 365 Outlook - Send an email (V2)
+kind: TaskDialog
+response:
+  activity: test email from ibm agent
+  mode: Strict
+
+modelDisplayName: Send an email (V2)
+modelDescription: send email to ansar
+outputs:
+  - propertyName: Response
+
+action:
+  kind: InvokeConnectorTaskAction
+  connectionReference: cr697_ibmTopProductsFinder.shared_office365.shared-office365-f0dbd777-a62a-43bd-85eb-b1fe59870001
+  connectionProperties:
+    mode: Invoker
+
+  operationId: SendEmailV2
+
+outputMode: All

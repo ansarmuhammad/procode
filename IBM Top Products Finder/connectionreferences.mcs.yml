@@ -1,0 +1,19 @@
+﻿connectionReferences:
+  - connectionReferenceLogicalName: cr697_ibmTopProductsFinder.shared_a365copilotchatmcp.shared-a365copilotch-7ed827c1-10ec-44cf-911c-4d1b3b2abb95
+    connectorId: /providers/Microsoft.PowerApps/apis/shared_a365copilotchatmcp
+  - connectionReferenceLogicalName: cr697_ibmTopProductsFinder.shared_a365memcp.shared-a365memcp-98bb4fce-f462-4388-83a0-be4fb78ef14d
+    connectorId: /providers/Microsoft.PowerApps/apis/shared_a365memcp
+  - connectionReferenceLogicalName: cr697_ibmTopProductsFinder.shared_a365outlookmailmcp.59d0d96dd6404fbfbc303df7ecb2c7a1
+    connectorId: /providers/Microsoft.PowerApps/apis/shared_a365outlookmailmcp
+  - connectionReferenceLogicalName: cr697_ibmTopProductsFinder.shared_a365teamsmcp.9894ec6f4dba4a82831ffeec80a16d19
+    connectorId: /providers/Microsoft.PowerApps/apis/shared_a365teamsmcp
+  - connectionReferenceLogicalName: cr697_ibmTopProductsFinder.shared_a365wordmcp.c4bcb8e7e4324b618a3d58e292383eaa
+    connectorId: /providers/Microsoft.PowerApps/apis/shared_a365wordmcp
+  - connectionReferenceLogicalName: cr697_ibmTopProductsFinder.shared_office365.shared-office365-f0dbd777-a62a-43bd-85eb-b1fe59870001
+    connectorId: /providers/Microsoft.PowerApps/apis/shared_office365
+  - connectionReferenceLogicalName: cr697_ibmTopProductsFinder.shared_workiqonedrive.c17b496c044e4495a30f01dbd2de4de7
+    connectorId: /providers/Microsoft.PowerApps/apis/shared_workiqonedrive
+  - connectionReferenceLogicalName: cr697_sharedmicrosoftcopilotstudio_f23e8
+    connectorId: /providers/Microsoft.PowerApps/apis/shared_microsoftcopilotstudio
+  - connectionReferenceLogicalName: cr697_sharedoffice365_5c0b1
+    connectorId: /providers/Microsoft.PowerApps/apis/shared_office365

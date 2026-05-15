@@ -1,0 +1,30 @@
+﻿jsonFileName: workflows/Whenanewemailarrives(V3)-67aeed64-4550-f111-bec7-7c1e52184e9d/workflow.json
+workflowId: 67aeed64-4550-f111-bec7-7c1e52184e9d
+name: When a new email arrives (V3)
+type: 1
+description: 'Trigger your agent with certain message upon event: When a new email arrives (V3).'
+subprocess: false
+category: 5
+mode: 0
+scope: 4
+onDemand: false
+triggerOnCreate: false
+triggerOnDelete: false
+asyncAutodelete: false
+syncWorkflowLogOnFailure: false
+stateCode: 1
+statusCode: 2
+runAs: 1
+isTransacted: true
+introducedVersion: 1.0.0.0
+isCustomizable:
+  value: true
+  canBeChanged: true
+  managedPropertyLogicalName: iscustomizableanddeletable
+businessProcessType: 0
+isCustomProcessingStepAllowedForOtherPublishers:
+  value: true
+  canBeChanged: true
+  managedPropertyLogicalName: canbedeleted
+modernFlowType: 0
+primaryEntity: none

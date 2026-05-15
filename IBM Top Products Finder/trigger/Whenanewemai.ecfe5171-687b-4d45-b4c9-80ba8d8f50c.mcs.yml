@@ -1,0 +1,12 @@
+mcs.metadata:
+  componentName: When a new email arrives (V3)
+  description: "Trigger your agent with certain message upon event: When a new email arrives (V3)."
+kind: ExternalTriggerConfiguration
+externalTriggerSource:
+  kind: WorkflowExternalTrigger
+  flowId: 67aeed64-4550-f111-bec7-7c1e52184e9d
+
+extensionData:
+  flowName: 9ae94a62-b6c5-123b-073f-930dafe36d4a
+  flowUrl: /providers/Microsoft.ProcessSimple/environments/Default-3c6322bf-c349-48f5-bdc9-750baa5c79a8/flows/9ae94a62-b6c5-123b-073f-930dafe36d4a
+  triggerConnectionType: Office 365 Outlook

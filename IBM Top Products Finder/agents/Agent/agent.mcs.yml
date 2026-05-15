@@ -1,0 +1,17 @@
+mcs.metadata:
+  componentName: Agent
+kind: AgentDialog
+response:
+  activity:
+  mode: Generated
+
+beginDialog:
+  kind: OnToolSelected
+  id: main
+  description: when the top 10 products are received from calling agent, then this agent will select top 3 afresh
+
+settings:
+  instructions: when the top 10 products are received from calling agent, then this agent will select top 3 afresh, will not get biased by the top 10 that it received.  will use its own judgement to select top 3 and also explain why
+
+inputType: {}
+outputType: {}

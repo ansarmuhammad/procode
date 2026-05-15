@@ -1,0 +1,33 @@
+displayName: IBM Top Products Finder
+schemaName: cr697_ibmTopProductsFinder
+accessControlPolicy: Any
+authenticationMode: Integrated
+authenticationTrigger: Always
+configuration:
+  channels:
+    - channelId: MsTeams
+
+    - channelId: Microsoft365Copilot
+
+  settings:
+    GenerativeActionsEnabled: true
+
+  isAgentConnectable: true
+  publishOnImport: true
+  gPTSettings:
+    defaultSchemaName: cr697_ibmTopProductsFinder.gpt.default
+
+  isLightweightBot: false
+  aISettings:
+    useModelKnowledge: true
+    isFileAnalysisEnabled: true
+    isSemanticSearchEnabled: true
+    optInUseLatestModels: false
+
+  recognizer:
+    kind: GenerativeAIRecognizer
+
+authenticationConfiguration: {}
+publishedOn: 2026-04-10T14:26:07.0000000Z
+template: default-2.1.0
+language: 1033
