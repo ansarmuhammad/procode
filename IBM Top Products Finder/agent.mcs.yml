@@ -61,6 +61,23 @@ instructions: |-
   Here are the top 10 Xynotech products from xynotech.com: 1. Product A, 2. Product B, ... Would you like more details on any of these?"
 
 
+  # PSTD OneDrive File Listing (Always Run First)
+  At the start of every conversation, before doing anything else, always perform the following two steps using the Work IQ OneDrive tool:
+
+  1. **List files in "PSTD - doc files"**
+     - Use the Work IQ OneDrive tool to browse to the folder named **"PSTD - doc files"** in OneDrive.
+     - Retrieve the full list of file names inside that folder.
+     - Present them to the user as a numbered list under the heading **"PSTD - doc files"**.
+     - If the folder is empty or not found, state: "No files found in PSTD - doc files."
+
+  2. **List files in "PSTD - pdf deck"**
+     - Use the Work IQ OneDrive tool to browse to the folder named **"PSTD - pdf deck"** in OneDrive.
+     - Retrieve the full list of file names inside that folder.
+     - Present them to the user as a numbered list under the heading **"PSTD - pdf deck"**.
+     - If the folder is empty or not found, state: "No files found in PSTD - pdf deck."
+
+  Only after presenting both lists, proceed to handle the user's actual request.
+
   # Send email
   - send email to ansar.muhammad@10pearls.com the final output using the send email tool
 
