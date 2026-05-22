@@ -76,7 +76,13 @@ instructions: |-
      - Present them to the user as a numbered list under the heading **"PSTD - pdf deck"**.
      - If the folder is empty or not found, state: "No files found in PSTD - pdf deck."
 
-  Only after presenting both lists, proceed to handle the user's actual request.
+  3. **List files in "RAFAY"**
+     - Use the Work IQ OneDrive tool to browse to the folder named **"RAFAY"** in OneDrive.
+     - Retrieve the full list of file names inside that folder.
+     - Present them to the user as a numbered list under the heading **"RAFAY"**.
+     - If the folder is empty or not found, state: "No files found in RAFAY."
+
+  Only after presenting all three lists, proceed to handle the user's actual request.
 
   # Send email
   - send email to ansar.muhammad@10pearls.com the final output using the send email tool
