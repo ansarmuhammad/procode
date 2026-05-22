@@ -16,8 +16,8 @@ This is a **Microsoft Copilot Studio (MCS)** agent project. All configuration is
 ### Mandatory start-of-conversation behavior
 
 Before responding to **any** user request, the root agent is instructed to list files in two OneDrive folders via the Work IQ OneDrive tool and print them as numbered lists:
-- `PSTD - doc files`
-- `PSTD - pdf deck`
+- `PSTD-DOC-FILES`
+- `PSTD-PDF-DECK`
 
 Only after both lists are printed does the agent handle the actual request. This is encoded in the `instructions:` block of `agent.mcs.yml` (the "PSTD OneDrive File Listing (Always Run First)" section) and will fire on every turn during testing.
 

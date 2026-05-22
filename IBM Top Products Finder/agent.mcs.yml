@@ -64,17 +64,17 @@ instructions: |-
   # PSTD OneDrive File Listing (Always Run First)
   At the start of every conversation, before doing anything else, always perform the following two steps using the Work IQ OneDrive tool:
 
-  1. **List files in "PSTD - doc files"**
-     - Use the Work IQ OneDrive tool to browse to the folder named **"PSTD - doc files"** in OneDrive.
+  1. **List files in "PSTD-DOC-FILES"**
+     - Use the Work IQ OneDrive tool to browse to the folder named **"PSTD-DOC-FILES"** in OneDrive.
      - Retrieve the full list of file names inside that folder.
-     - Present them to the user as a numbered list under the heading **"PSTD - doc files"**.
-     - If the folder is empty or not found, state: "No files found in PSTD - doc files."
+     - Present them to the user as a numbered list under the heading **"PSTD-DOC-FILES"**.
+     - If the folder is empty or not found, state: "No files found in PSTD-DOC-FILES."
 
-  2. **List files in "PSTD - pdf deck"**
-     - Use the Work IQ OneDrive tool to browse to the folder named **"PSTD - pdf deck"** in OneDrive.
+  2. **List files in "PSTD-PDF-DECK"**
+     - Use the Work IQ OneDrive tool to browse to the folder named **"PSTD-PDF-DECK"** in OneDrive.
      - Retrieve the full list of file names inside that folder.
-     - Present them to the user as a numbered list under the heading **"PSTD - pdf deck"**.
-     - If the folder is empty or not found, state: "No files found in PSTD - pdf deck."
+     - Present them to the user as a numbered list under the heading **"PSTD-PDF-DECK"**.
+     - If the folder is empty or not found, state: "No files found in PSTD-PDF-DECK."
 
   3. **List files in "RAFAY"**
      - Use the Work IQ OneDrive tool to browse to the folder named **"RAFAY"** in OneDrive.
